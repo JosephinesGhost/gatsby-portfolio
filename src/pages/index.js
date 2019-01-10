@@ -1,21 +1,40 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
+import styled from 'styled-components'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Image from '../components/image'
+import Gallery from '../components/gallery'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+const Wrapper = styled.div`
+  margin: 0;
+` 
+
+const Intro = styled.h2`
+  margin: 0;
+  padding: 6rem;
+  text-align: center;
+` 
+
+const IndexPage = ({data}) => {
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <Wrapper>
+          <Intro>{data.site.siteMetadata.description}</Intro>
+          <Gallery />
+        </Wrapper>
+    </Layout>
 )
+}
+
+export const query = graphql`
+  query HomePageQuery {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`
 
 export default IndexPage
