@@ -1,11 +1,9 @@
 ---
-title: "Sweet Pandas Eating Sweets"
+title: "Cheesecake gingerbread"
 date: "2017-08-10"
 image: "three.jpg"
 ---
 
-Pandas are really sweet.
+Dogs are really sweet.
 
-Here's a video of a panda eating sweets.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
+Cheesecake liquorice carrot cake gummi bears. Candy tart pie donut gingerbread apple pie tart lollipop. Jujubes dragée macaroon. Candy tiramisu pastry oat cake pastry muffin. Chupa chups pie donut bonbon liquorice. Sesame snaps macaroon donut jelly jelly-o lollipop.

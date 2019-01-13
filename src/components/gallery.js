@@ -4,29 +4,51 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  margin-bottom: 1.45rem;
+    margin: auto;
 ` 
 
 const Title = styled.h3`
-  display: inline-block;
-  border-bottom: 1px solid;
+    display: inline-block;
+    margin-bottom: 1rem;
 `
 
 const Inner = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 30px;
-  margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
 `
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: inherit;
+    font-family: serifa, serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
 `
 
 const StyledImg = styled(Img)`
-  margin-bottom: 1rem;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    
+        :hover {
+            opacity: .7;
+        }
 `
+
+const PostTitle = styled(Title)`
+    font-size: 1.2rem;
+
+`
+const Date = styled.p`  
+    font-size: 0.8rem;
+    display: block;
+    color: #777;
+ 
+`
+
 
 const Gallery = () => (
     <StaticQuery
@@ -66,13 +88,13 @@ const Gallery = () => (
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
                     <StyledLink to={node.fields.slug}>
-                        <StyledImg fluid={node.frontmatter.image.childImageSharp.fluid}/>
-                        <h3>
+                        <StyledImg fluid={node.frontmatter.image.childImageSharp.fluid} />
+                        <PostTitle>
                         {node.frontmatter.title}{" "}
-                        <span>
-                            — {node.frontmatter.date}
-                        </span>
-                        </h3>
+                        </PostTitle>
+                        <Date>
+                            {node.frontmatter.date}
+                        </Date>
                         <p>{node.excerpt}</p>
                     </StyledLink> 
                 </div>

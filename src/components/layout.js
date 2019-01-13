@@ -6,15 +6,32 @@ import styled from 'styled-components'
 import Header from './header'
 import './layout.css'
 
-
 const Wrapper = styled.div`
   margin: 0;
   padding: 1.45rem;
+
+  position: relative;
+  min-height: 100vh;
 `
 
 const Inner = styled.div`
   margin: 0 auto;
   max-width: 90%;
+
+  padding-bottom: 3rem; // For footer
+`
+
+const Footer = styled.div`
+  font-family: serifa, serif;
+  font-weight: 300;
+  padding: 0.8rem;
+  margin-top: 12rem;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
 `
 
 
@@ -35,11 +52,11 @@ const Layout = ({ children }) => (
         <Inner>
           {children}
         </Inner>
-        <footer>
+        <Footer>
             Flavia Schaller © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          </Footer>
       </Wrapper>
     )}
   />

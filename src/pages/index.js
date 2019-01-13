@@ -10,8 +10,7 @@ const Wrapper = styled.div`
 ` 
 
 const Intro = styled.h2`
-  margin: 0;
-  padding: 6rem;
+  margin-bottom: 6rem;
   text-align: center;
 ` 
 

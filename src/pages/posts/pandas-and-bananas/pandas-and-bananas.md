@@ -1,10 +1,7 @@
 ---
-title: "Pandas and Bananas"
+title: "Bonbon jujubes tootsie roll"
 date: "2017-08-21"
 image: "two.jpg"
 ---
 
-Do Pandas eat bananas? Check out this short video that shows that yes! pandas do
-seem to really enjoy bananas!
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4SZl1r2O_bY" frameborder="0" allowfullscreen></iframe>
+Cheesecake liquorice carrot cake gummi bears. Candy tart pie donut gingerbread apple pie tart lollipop. Jujubes dragée macaroon. Candy tiramisu pastry oat cake pastry muffin. Chupa chups pie donut bonbon liquorice. Sesame snaps macaroon donut jelly jelly-o lollipop.

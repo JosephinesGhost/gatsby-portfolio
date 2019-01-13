@@ -1,18 +1,21 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 12rem;
 ` 
 
 const Container = styled.div`
   margin: 0 auto,
-  padding: 1.45rem 1.0875rem,
+  padding: 1.45rem,
 `
 
 const Title = styled.h1`
+  font-family: tamarillo-jf;
+  font-weight: 400;
+  // font-style: italic;
   color: #444;
   margin: 0;
 `
@@ -24,12 +27,18 @@ const StyledLink = styled(Link)`
 `
 
 const Menu = styled.div`
+  font-family: acumin-pro;
+  font-weight: 300;
+  font-size: 0.85rem;
+  text-transform: uppercase;
   float: right;
 
   .item {
     padding: 0.5rem;
+    text-decoration: none;
   }
 `
+
 
 const Header = ({ siteTitle }) => (
   <Wrapper>
