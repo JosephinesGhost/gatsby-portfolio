@@ -13,19 +13,20 @@ const Wrapper = styled.div`
 ` 
 
 const Title = styled.h3`
-    font-family: serifa, serif;
-    font-weight: 400;
     display: inline-block;
     margin-bottom: 0.7rem;
 `
 
 const TextField = styled(Field)`
     flex: 0 1 1;
-    background: #faf5f3;
-    border: none;
     padding: 0.3rem 0.8rem;
-    margin: 0.6rem;
+    margin: 0.6rem 0;
+`
 
+const Button = styled.button`
+    flex: 0 1 auto;
+    margin: auto;
+    margin-right: 0;
 `
 
 
@@ -61,9 +62,9 @@ const Basic = () => (
                 <ErrorMessage name="email" component="div" />
                 <TextField type="textarea" name="message" placeholder="Message" component="textarea"/>
                 <ErrorMessage name="message" component="div" />
-                <button type="submit" disabled={isSubmitting}>
+                <Button type="submit" disabled={isSubmitting}>
                     Submit
-                </button>
+                </Button>
             </Wrapper>
         </Form>
       )}

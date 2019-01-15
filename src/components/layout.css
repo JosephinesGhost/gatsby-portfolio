@@ -38,11 +38,13 @@ template {
   display: none;
 }
 a {
+  color: #444;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
+  color: #e5a599;
   outline-width: 0;
 }
 abbr[title] {
@@ -110,6 +112,10 @@ select,
 textarea {
   font: inherit;
   margin: 0;
+  background: #faeeed;
+  border-color: transparent;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
 }
 optgroup {
   font-weight: 700;
@@ -118,16 +124,30 @@ button,
 input {
   overflow: visible;
 }
-button,
+button.gradient-button,
 select {
-  text-transform: none;
+  text-transform: uppercase;
+  background-color: #faeeed;
+  color: #444;
+  font-family: acumin, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  padding: 4px 18px;
+  border-radius: 3px;
 }
 [type='reset'],
 [type='submit'],
 button,
 html [type='button'] {
   -webkit-appearance: button;
+  border: none;
 }
+
+button.gradient-button:hover {
+  background-image: linear-gradient(45deg, #f8e6e5 50%, #fae9ff 100%);
+  background-color: #f8e6e5;	position: relative;	box-shadow: 0px 0px 30px 0px #FFEBE5;
+}
+
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner,
@@ -244,7 +264,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: serifa, "Courier New", Courier, monospace;
+  font-family: orpheuspro, "Courier New", Courier, monospace;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -260,7 +280,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: serifa, "Courier New", Courier, monospace;
+  font-family: orpheuspro, "Courier New", Courier, monospace;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -276,8 +296,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: serifa, "Courier New", Courier, monospace;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;

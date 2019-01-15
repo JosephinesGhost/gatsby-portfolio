@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     margin: auto;
 ` 
 
-const Title = styled.h3`
+const Title = styled.h2`
     display: inline-block;
     margin-bottom: 1rem;
 `
@@ -16,6 +16,11 @@ const Inner = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 40px;
+    
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-column-gap: 40px;
+    }
 `
 
 const StyledLink = styled(Link)`
@@ -38,8 +43,9 @@ const StyledImg = styled(Img)`
         }
 `
 
-const PostTitle = styled(Title)`
+const PostTitle = styled.h3`
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 
 `
 const Date = styled.p`  
@@ -92,11 +98,11 @@ const Gallery = () => (
                         <PostTitle>
                         {node.frontmatter.title}{" "}
                         </PostTitle>
-                        <Date>
-                            {node.frontmatter.date}
-                        </Date>
-                        <p>{node.excerpt}</p>
                     </StyledLink> 
+                    <Date>
+                        {node.frontmatter.date}
+                    </Date>
+                    <p>{node.excerpt}</p>
                 </div>
             ))}
             </Inner>

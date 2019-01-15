@@ -9,7 +9,6 @@ import './layout.css'
 const Wrapper = styled.div`
   margin: 0;
   padding: 1.45rem;
-
   position: relative;
   min-height: 100vh;
 `
