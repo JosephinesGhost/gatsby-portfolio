@@ -21,7 +21,7 @@ const Inner = styled.div`
 `
 
 const Footer = styled.div`
-  font-family: serifa, serif;
+  font-family: brandon-grotesque, serif;
   font-weight: 300;
   padding: 0.8rem;
   margin-top: 12rem;

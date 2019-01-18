@@ -23,6 +23,10 @@ const TextField = styled(Field)`
     margin: 0.6rem 0;
 `
 
+const Error = styled(ErrorMessage)`
+    font-size: 0.5rem;
+`
+
 const Button = styled.button`
     flex: 0 1 auto;
     margin: auto;
@@ -57,11 +61,11 @@ const Basic = () => (
         <Form>
             <Wrapper>
                 <TextField type="name" name="name" placeholder="Name"/>
-                <ErrorMessage name="name" component="div" />
+                <Error name="name" component="div" />
                 <TextField type="email" name="email" placeholder="Email"/>
-                <ErrorMessage name="email" component="div" />
+                <Error name="email" component="div" />
                 <TextField type="textarea" name="message" placeholder="Message" component="textarea"/>
-                <ErrorMessage name="message" component="div" />
+                <Error name="message" component="div" />
                 <Button type="submit" disabled={isSubmitting}>
                     Submit
                 </Button>

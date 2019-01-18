@@ -17,15 +17,15 @@ const Inner = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 40px;
     
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         grid-template-columns: 1fr;
         grid-column-gap: 40px;
     }
 `
 
 const StyledLink = styled(Link)`
-    font-family: serifa, serif;
-    font-weight: 300;
+    font-family: brandon-grotesque, serif;
+    font-weight: 700;
     text-decoration: none;
     color: inherit;
 `
@@ -35,8 +35,8 @@ const StyledImg = styled(Img)`
     margin-bottom: 1rem;
 
     opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+	-webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
     
         :hover {
             opacity: .7;

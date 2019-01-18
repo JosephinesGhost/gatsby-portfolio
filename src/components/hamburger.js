@@ -73,7 +73,7 @@ const Inner = styled.div`
     width: 30rem;
     height: 100vh;
     padding: 3rem;
-    position: fixed;
+    position: fixed; //scroll??
     top: 0;
     right: 0;
     z-index: 800;
@@ -92,7 +92,7 @@ const Inner = styled.div`
 `
 
 const Nav = styled.div`
-    font-family: acumin-pro;
+    font-family: brandon-grotesque;
     text-align: center;
     margin: 0.5rem auto;
     font-weight: 300;
@@ -100,10 +100,11 @@ const Nav = styled.div`
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    color: aliceblue;
+`
 
-    .item {
-        text-decoration: none;
-    }
+const Item = styled(Link)`
+    text-decoration: none;  
 `
 
 const Title = styled.h1`
@@ -115,7 +116,7 @@ const TitleLink = styled(Link)`
   text-decoration: none;
 `
 
-const Hamburger = ({ siteTitle }) => (
+const Hamburger = () => (
         <Wrapper>
             <BurgerMenu type="checkbox" id="burger-menu" />
             <BurgerLabel id="burger-label" for="burger-menu">
@@ -127,16 +128,19 @@ const Hamburger = ({ siteTitle }) => (
                     Oio!!
                 </TitleLink>
              </Title>
-                <Nav>
-                    <Link to={`/`} className='item'>
+                <Nav id="burgerLinks">
+                    <Item to={`/`} className='menuitem'>
                         Home
-                    </Link>
-                    <Link to={`/about/`} className='item'>
+                    </Item>
+                    <Item to={`/portfolio/`} className='menuitem'>
+                        Portfolio
+                    </Item>
+                    <Item to={`/about/`} className='menuitem'>
                         About
-                    </Link>
-                    <Link to={`/contact/`} className='item'>
+                    </Item>
+                    <Item to={`/contact/`} className='menuitem'>
                         Contact
-                    </Link>
+                    </Item>
                 </Nav>
             </Inner>
         </Wrapper>

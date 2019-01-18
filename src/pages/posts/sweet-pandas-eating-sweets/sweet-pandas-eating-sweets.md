@@ -2,6 +2,7 @@
 title: "Cheesecake gingerbread"
 date: "2017-08-10"
 image: "three.jpg"
+tags: ["animals", "zoos"]
 ---
 
 Dogs are really sweet.

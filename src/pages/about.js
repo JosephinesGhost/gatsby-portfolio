@@ -8,17 +8,26 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
   margin: 12rem auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 ` 
 
 const StyledImg = styled(Img)`
-  flex: 1 50%;
+  flex: 1;
   border-radius: 7px;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    order: -1;
+    margin-bottom: 2rem;
+  }
 `
 
 const Content = styled.div`
-  flex: 1 50%;
-  margin: 0 3rem 0 0;
+  flex: 1;
+  margin: 0 6rem 0 0;
 ` 
 
 export default ({ data }) => (

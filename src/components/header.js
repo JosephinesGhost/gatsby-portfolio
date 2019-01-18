@@ -15,19 +15,21 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-family: tamarillo-jf;
-  font-weight: 400;
   color: #444;
-  margin: 0;
+ 
 `
 
 const StyledLink = styled(Link)`
   color: #444;
   text-decoration: none;
   float: left;
+    ${Title} & {
+      font-size: 3.3rem;
+    }
 `
 
 const Menu = styled.div`
-  font-family: acumin-pro;
+  font-family: brandon-grotesque;
   font-weight: 300;
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -43,16 +45,16 @@ const Menu = styled.div`
 
   @media (max-width: 1025px) {
     display: none;
-    
   }
-`
-
+` 
 
 const Header = ({ siteTitle }) => (
   <Wrapper>
     <Container>
       <Title>
-        <StyledLink to="/">
+        <StyledLink to="/" activeStyle={{
+          display: 'none'
+        }}>
           {siteTitle}
         </StyledLink>
       </Title>
