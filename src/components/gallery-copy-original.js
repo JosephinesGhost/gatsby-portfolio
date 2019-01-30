@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { TweenMax } from "gsap";
+import React from 'react'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -56,41 +55,32 @@ const Date = styled.p`
 `
 
 
-export class Gallery extends Component {
-      
-      componentDidMount(){
-        TweenMax.staggerFrom('.box', 0.8, {y: 100, autoAlpha: 1}, 0.2);
-      }
-
-      render(){
-        return (
-            <Wrapper>
-            <Title>
-                Works
-            </Title>
-                <Inner>
-                {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id} className='box'>
-                        <StyledLink to={node.fields.slug}>
-                            <StyledImg fluid={node.frontmatter.image.childImageSharp.fluid} />
-                            <PostTitle>
-                            {node.frontmatter.title}{" "}
-                            </PostTitle>
-                        </StyledLink> 
-                        <Date>
-                            {node.frontmatter.date}
-                        </Date>
-                        <p>{node.excerpt}</p>
-                    </div>
-                ))}
-                </Inner>
-            </Wrapper>
-        )
-    }
-}
+export const Gallery = ({ data }) => (
+    
+        <Wrapper>
+        <Title>
+            Works
+        </Title>
+            <Inner>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+                <div key={node.id}>
+                    <StyledLink to={node.fields.slug}>
+                        <StyledImg fluid={node.frontmatter.image.childImageSharp.fluid} />
+                        <PostTitle>
+                        {node.frontmatter.title}{" "}
+                        </PostTitle>
+                    </StyledLink> 
+                    <Date>
+                        {node.frontmatter.date}
+                    </Date>
+                    <p>{node.excerpt}</p>
+                </div>
+            ))}
+            </Inner>
+        </Wrapper>
+)
 
   export default props => (
-      
     <StaticQuery
     query={graphql`
       query {
@@ -122,3 +112,4 @@ export class Gallery extends Component {
     render={data => <Gallery data={data} {...props} />}
     />
 )
+

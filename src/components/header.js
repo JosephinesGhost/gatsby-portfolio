@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import Hamburger from './hamburger'
 
 const Wrapper = styled.div`
-  margin-bottom: 12rem;
+  margin: 0;
 ` 
 
 const Container = styled.div`
@@ -24,14 +24,15 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   float: left;
     ${Title} & {
-      font-size: 3.3rem;
+      font-size: 2rem;
     }
 `
 
 const Menu = styled.div`
   font-family: brandon-grotesque;
   font-weight: 300;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   display: flex;
   flex-direction: row;

@@ -7,16 +7,15 @@ import Header from './header'
 import './layout.css'
 
 const Wrapper = styled.div`
-  margin: 0;
-  padding: 1.45rem;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 95%;
   position: relative;
   min-height: 100vh;
 `
 
 const Inner = styled.div`
   margin: 0 auto;
-  max-width: 90%;
-
   padding-bottom: 3rem; // For footer
 `
 

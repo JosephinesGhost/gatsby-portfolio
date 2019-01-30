@@ -10,5 +10,5 @@
   Gatsby's default starter
 </h1>
 
-
+<p>Portfolio/Blog website using styled-components</p>
 <!-- AUTO-GENERATED-CONTENT:END -->

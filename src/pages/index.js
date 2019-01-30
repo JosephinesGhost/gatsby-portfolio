@@ -14,7 +14,7 @@ const Intro = styled.div`
   display: flex;
   flex-direction: column;
   margin:  auto;
-  height: 50vh;
+  height: 30vh;
 ` 
 const Title = styled.h1`
   font-family: tamarillo-jf;

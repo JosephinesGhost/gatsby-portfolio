@@ -59,7 +59,7 @@ const Date = styled.p`
 export class Gallery extends Component {
       
       componentDidMount(){
-        TweenMax.staggerFrom('.box', 0.8, {y: 100, autoAlpha: 1}, 0.2);
+        TweenMax.staggerFrom('.box', 0.8, {y: 120, autoAlpha: 1}, 0.2);
       }
 
       render(){

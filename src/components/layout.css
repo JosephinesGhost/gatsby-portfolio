@@ -45,7 +45,7 @@ a {
 }
 a:active,
 a:hover {
-  color: #e5a599;
+  color: #e2a8a3;
   outline-width: 0;
 }
 abbr[title] {
@@ -219,7 +219,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: brandon-grotesque, "Courier New", Courier, monospace;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -249,7 +249,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: brandon-grotesque, "Courier New", Courier, monospace;
+  font-family: tamarillo-jf, "Courier New", Courier, monospace;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -270,6 +270,7 @@ h2 {
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 h3 {
   margin-left: 0;
@@ -281,11 +282,12 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: brandon-grotesque, "Courier New", Courier, monospace;
-  font-weight: 500;
+  font-family: brandon-grotesque, serif, "Courier New", Courier, monospace;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1.2rem;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 h4 {
   margin-left: 0;
@@ -295,13 +297,14 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.2rem;
   color: inherit;
   font-family: brandon-grotesque, "Courier New", Courier, monospace;
-  font-weight: bold;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 h5 {
   margin-left: 0;
@@ -311,14 +314,14 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.2rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: brandon-grotesque, "Courier New", Courier, monospace;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  font-size: 1rem;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 h6 {
   margin-left: 0;
@@ -330,12 +333,13 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: brandon-grotesque, serif, "Courier New", Courier, monospace;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  font-size: 0.88405rem;
   line-height: 1.1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 hgroup {
   margin-left: 0;
