@@ -9,7 +9,7 @@ import Anima from '../components/anima'
 const Wrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  margin: 12rem auto;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -29,7 +29,7 @@ const StyledImg = styled(Img)`
 
 const Content = styled.div`
   flex: 1;
-  margin: 0 0 0 6rem;
+  margin-left: 6rem;
 ` 
 
 export default ({ data }) => (

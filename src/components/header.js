@@ -6,11 +6,11 @@ import styled from 'styled-components'
 import Hamburger from './hamburger'
 
 const Wrapper = styled.div`
-  margin: 0;
+  overflow:auto
 ` 
 
 const Container = styled.div`
-  margin: 0;
+  margin-bottom: 12rem;
 `
 
 const Title = styled.h1`
@@ -54,7 +54,7 @@ const Header = ({ siteTitle }) => (
     <Container>
       <Title>
         <StyledLink to="/" activeStyle={{
-          display: 'none'
+          border: 'none'
         }}>
           {siteTitle}
         </StyledLink>

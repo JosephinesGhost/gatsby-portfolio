@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-    margin: auto;
+    margin: 0 auto;
+    overflow: visible;
 ` 
 
-const Title = styled.h3`
+const Title = styled.h5`
     display: inline-block;
     margin-bottom: 1rem;
 `
@@ -26,7 +27,6 @@ const Inner = styled.div`
 
 const StyledLink = styled(Link)`
     font-family: brandon-grotesque, serif;
-    font-weight: 700;
     text-decoration: none;
     color: inherit;
 `
@@ -59,7 +59,7 @@ const Date = styled.p`
 export class Gallery extends Component {
       
       componentDidMount(){
-        TweenMax.staggerFrom('.box', 0.8, {y: 100, autoAlpha: 1}, 0.2);
+        TweenMax.staggerFrom('.box', 0.8, {y: 100, autoAlpha: 0}, 0.2);
       }
 
       render(){

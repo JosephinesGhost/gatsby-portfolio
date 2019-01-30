@@ -15,16 +15,14 @@ const Wrapper = styled.div`
 `
 
 const Inner = styled.div`
-  margin: 0 auto;
-  padding-bottom: 3rem; // For footer
+  margin: 0 auto 6rem;
+  padding-bottom: 3rem; /* For footer */
 `
 
 const Footer = styled.div`
   font-family: brandon-grotesque, serif;
   font-weight: 300;
   padding: 0.8rem;
-  margin-top: 12rem;
-
   position: absolute;
   left: 0;
   bottom: 0;
@@ -51,10 +49,10 @@ const Layout = ({ children }) => (
           {children}
         </Inner>
         <Footer>
-            Flavia Schaller © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </Footer>
+          Flavia Schaller © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </Footer>
       </Wrapper>
     )}
   />
