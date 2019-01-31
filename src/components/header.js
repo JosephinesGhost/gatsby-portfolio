@@ -11,7 +11,8 @@ const Wrapper = styled.div`
   top: 0;
   height: 60px;
   width: 100%;
-  background-color: aliceblue;
+  background-color: white;
+  ;
   transition: top 0.3s;
   z-index: 90;
     &.hide {
@@ -20,12 +21,16 @@ const Wrapper = styled.div`
 ` 
 
 const Container = styled.div`
-  
+  padding: 0.5rem 1rem;
+  height: 100%;
+
 `
 
 const Title = styled.h1`
+  float: left;
   font-family: tamarillo-jf;
   color: #444;
+  
  
 `
 
@@ -39,6 +44,7 @@ const StyledLink = styled(Link)`
 `
 
 const Menu = styled.div`
+  height: 100%;
   font-family: brandon-grotesque;
   font-weight: 300;
   font-size: 0.75rem;
@@ -46,12 +52,13 @@ const Menu = styled.div`
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
-  align-content: flex-end; 
-  float: right;
+  justify-content: flex-end;
+  align-items: center; 
 
   .item {
-    padding: 1rem 0.5rem;
+    padding: 0 0.5rem;
     text-decoration: none;
+    flex: 0 1 auto;
   }
 
   @media (max-width: 1025px) {
@@ -67,7 +74,7 @@ export class Header extends Component {
   }
 
   handleScroll = () => {
-    window.scrollY > this.prev
+    ((window.scrollY > this.prev) && (window.scrollY > 600))
       ? !this.state.isHidden && this.setState({ isHidden: true })
       : this.state.isHidden && this.setState({ isHidden: false });
       this.prev = window.scrollY;
@@ -83,8 +90,8 @@ export class Header extends Component {
 
   render(){
     return (
-      <Wrapper>
-        <Container className={ this.state.isHidden ? 'hide' : '' }>
+      <Wrapper className={ this.state.isHidden ? 'hide' : '' }>
+        <Container>
           <Title>
             <StyledLink to="/" activeStyle={{
               border: 'none'

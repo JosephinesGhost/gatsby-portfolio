@@ -8,6 +8,7 @@ import './layout.css'
 
 const Wrapper = styled.div`
   margin: 0 auto;
+  margin-top: 12rem;
   padding: 1rem;
   max-width: 95%;
   position: relative;
