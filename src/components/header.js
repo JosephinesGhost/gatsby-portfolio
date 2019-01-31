@@ -1,16 +1,27 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { Component } from "react"
 import styled from 'styled-components'
 
-import Hamburger from './hamburger'
+import Hamburger from '../components/hamburger'
 
 const Wrapper = styled.div`
-  overflow:auto
+  overflow: auto;
 ` 
 
 const Container = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: aliceblue;
   margin-bottom: 12rem;
+  transition: top 0.3s;
+  z-index: 90;
+    &.hide {
+      top: -60px;
+    }
 `
 
 const Title = styled.h1`
@@ -49,28 +60,53 @@ const Menu = styled.div`
   }
 ` 
 
-const Header = ({ siteTitle }) => (
-  <Wrapper>
-    <Container>
-      <Title>
-        <StyledLink to="/" activeStyle={{
-          border: 'none'
-        }}>
-          {siteTitle}
-        </StyledLink>
-      </Title>
-      <Hamburger/>
-      <Menu>
-        <Link to={`/about/`} className='item'>
-          About
-        </Link>
-        <Link to={`/contact/`} className='item'>
-          Contact
-        </Link>
-      </Menu>
-    </Container>
-  </Wrapper>
-)
+export class Header extends Component {
+  constructor(props){
+    super(props);
+    this.state = {isHidden: false};
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  handleScroll = () => {
+    window.scrollY > this.prev
+      ? !this.state.isHidden && this.setState({ isHidden: true })
+      : this.state.isHidden && this.setState({ isHidden: false });
+      this.prev = window.scrollY;
+
+  }
+  
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  render(){
+    return (
+      <Wrapper>
+        <Container className={ this.state.isHidden ? 'hide' : '' }>
+          <Title>
+            <StyledLink to="/" activeStyle={{
+              border: 'none'
+            }}>
+              {this.props.siteTitle}
+            </StyledLink>
+          </Title>
+          <Hamburger/>
+          <Menu>
+            <Link to={`/about/`} className='item'>
+              About
+            </Link>
+            <Link to={`/contact/`} className='item'>
+              Contact
+            </Link>
+          </Menu>
+        </Container>
+      </Wrapper>
+    )
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

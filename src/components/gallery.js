@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TweenMax } from "gsap";
+import { TimelineLite } from "gsap";
 import { Link, graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -57,9 +57,14 @@ const Date = styled.p`
 
 
 export class Gallery extends Component {
-      
+
+    constructor(props){
+        super(props);
+        this.myTween = new TimelineLite({paused: true});
+      }
+    
       componentDidMount(){
-        TweenMax.staggerFrom('.box', 0.8, {y: 100, autoAlpha: 0}, 0.2);
+        this.myTween.staggerFrom('.box', 0.8, {y: 100, autoAlpha: 0}, 0.2).play();
       }
 
       render(){
