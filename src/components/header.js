@@ -6,22 +6,21 @@ import styled from 'styled-components'
 import Hamburger from '../components/hamburger'
 
 const Wrapper = styled.div`
-  overflow: auto;
-` 
-
-const Container = styled.div`
   position: fixed;
   left: 0;
   top: 0;
   height: 60px;
   width: 100%;
   background-color: aliceblue;
-  margin-bottom: 12rem;
   transition: top 0.3s;
   z-index: 90;
     &.hide {
       top: -60px;
     }
+` 
+
+const Container = styled.div`
+  
 `
 
 const Title = styled.h1`
