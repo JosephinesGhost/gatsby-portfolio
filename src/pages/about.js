@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import Icon from '../assets/svgs/alarm.svg';
+// import Icon from '../assets/svgs/alarm.svg';
 
 const Wrapper = styled.div`
   display: flex;
