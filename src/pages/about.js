@@ -40,7 +40,6 @@ export default ({ data }) => (
         Chocolate gummies cake. Cookie oat cake jujubes cupcake tart tart chocolate bar gingerbread jelly-o. Gummies chocolate cake macaroon sesame snaps cookie. Dragée wafer danish dragée muffin muffin. Marzipan gummies cookie cupcake pudding pie. 
         Caramels chocolate bar sugar plum. Halvah muffin pie gummi bears. Fruitcake chocolate gingerbread. 
         </p>
-        <Icon />
       </Content>
       <StyledImg fluid={data.aboutImage.childImageSharp.fluid} />
     </Wrapper>
