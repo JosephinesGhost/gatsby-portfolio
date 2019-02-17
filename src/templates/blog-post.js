@@ -8,20 +8,15 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  margin: 12rem auto;
 ` 
 
-const Title = styled.h1`
+const Title = styled.h2`
   flex: 0 1 1;
-  font-family: serifa, serif;
-  font-weight: 400;
   display: inline-block;
 `
 
 const Text = styled.div`
   flex: 0 1 1;
-  font-family: serifa, serif;
-  font-weight: 300;
 `
 
 const StyledImg = styled(Img)`

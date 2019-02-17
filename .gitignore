@@ -70,3 +70,5 @@ yarn-error.log
 
 # Mine
 src/backups/
+src/assets/fonts
+src/assets/svgs

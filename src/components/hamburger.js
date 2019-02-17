@@ -16,12 +16,12 @@ const BurgerMenu = styled.input`
 `
 
 const BurgerLabel = styled.label`
-    position: fixed;
+    position: absolute;
     cursor: pointer;
     width: 40px;
     height: 40px;
-    right: 1rem;
-    top: 1rem;
+    right: .5rem;
+    top: .5rem;
     z-index: 900;
 `
 

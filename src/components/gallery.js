@@ -1,32 +1,67 @@
 import React, { Component } from "react";
-import { TimelineLite } from "gsap";
 import { Link, graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
     margin: 0 auto;
+    margin-bottom: 6rem;
     overflow: visible;
 ` 
 
 const Title = styled.h5`
-    display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 `
 
 const Inner = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-    
-    @media (max-width: 1024px) {
-        grid-template-columns: 1fr;
-        grid-column-gap: 40px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 6rem;
+     
+    @media (max-width: 1048px) {
+        grid-template-columns: 1fr 1fr;
     }
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+
+`
+
+const Box = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    align-items: center;
+
+    ${Inner} &:nth-child(even) {
+        grid-template-areas: 
+        "right left";
+    }
+
+    ${Inner} &:nth-child(odd) {
+        grid-template-areas: 
+        "left right";
+    }
+
+`
+
+const Thumb = styled(Link)`
+    text-decoration: none;
+    color: inherit;
+    grid-area: left;
+
+`
+
+const Content = styled.div`
+    text-decoration: none;
+    grid-area: right;
+    padding: 2rem;
+
 `
 
 const StyledLink = styled(Link)`
-    font-family: brandon-grotesque, serif;
     text-decoration: none;
     color: inherit;
 `
@@ -34,7 +69,6 @@ const StyledLink = styled(Link)`
 const StyledImg = styled(Img)`
     border-radius: 7px;
     margin-bottom: 1rem;
-
     opacity: 1;
 	-webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
@@ -58,15 +92,6 @@ const Date = styled.p`
 
 export class Gallery extends Component {
 
-    constructor(props){
-        super(props);
-        this.myTween = new TimelineLite({paused: true});
-      }
-    
-      componentDidMount(){
-        this.myTween.staggerFrom('.box', 0.8, {y: 100, autoAlpha: 0}, 0.2).play();
-      }
-
       render(){
         return (
             <Wrapper>
@@ -75,18 +100,22 @@ export class Gallery extends Component {
             </Title>
                 <Inner>
                 {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id} className='box'>
-                        <StyledLink to={node.fields.slug}>
+                    <Box key={node.id} className='box' >
+                        <Thumb to={node.fields.slug}>
                             <StyledImg fluid={node.frontmatter.image.childImageSharp.fluid} />
-                            <PostTitle>
-                            {node.frontmatter.title}{" "}
-                            </PostTitle>
-                        </StyledLink> 
-                        <Date>
+                        </Thumb> 
+                        <Content>
+                            <StyledLink to={node.fields.slug}>
+                                <PostTitle>
+                                    {node.frontmatter.title}{" "}
+                                </PostTitle>
+                            </StyledLink>
+                            <Date>
                             {node.frontmatter.date}
-                        </Date>
-                        <p>{node.excerpt}</p>
-                    </div>
+                            </Date>
+                            <p>{node.excerpt}</p>
+                        </Content>
+                    </Box>
                 ))}
                 </Inner>
             </Wrapper>
@@ -94,7 +123,7 @@ export class Gallery extends Component {
     }
 }
 
-  export default props => (
+export default props => (
       
     <StaticQuery
     query={graphql`
@@ -110,7 +139,10 @@ export class Gallery extends Component {
                   image {
                   childImageSharp {
                       fluid(maxWidth: 800) {
-                      ...GatsbyImageSharpFluid_noBase64
+                      ...GatsbyImageSharpFluid
+                        base64
+                        tracedSVG
+                        aspectRatio
                       }
                   }
               }

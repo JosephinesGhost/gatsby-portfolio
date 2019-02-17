@@ -18,8 +18,19 @@ module.exports = {
       options: {
         typekit: {
           id: 'wea5sbe'
+        },
+        google: {
+          families: ['Cormorant Garamond:300']
         }
-      },
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+          rule: {
+            include: /assets/
+          }
+      }
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,

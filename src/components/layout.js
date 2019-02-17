@@ -4,31 +4,42 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Header from './header'
+import '../assets/fonts/fonts.css'
 import './layout.css'
+
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  margin-top: 12rem;
-  padding: 1rem;
-  max-width: 95%;
   position: relative;
   min-height: 100vh;
+  padding-bottom: 3rem; /* For footer */
+
+    @media (max-width: 800px) {
+        padding: 1rem 3rem 3rem;
+    }
 `
 
 const Inner = styled.div`
-  margin: 0 auto 6rem;
-  padding-bottom: 3rem; /* For footer */
+  margin: 12rem auto 6rem;
+  padding: 1rem;
+  max-width: 94%;
 `
 
 const Footer = styled.div`
-  font-family: brandon-grotesque, serif;
-  font-weight: 300;
   padding: 0.8rem;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 3rem;
+`
+
+const FooterInner = styled.div`
+  font-family: GillSansNova-Light, serif;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 94%;
 `
 
 
@@ -50,9 +61,11 @@ const Layout = ({ children }) => (
           {children}
         </Inner>
         <Footer>
-          Flavia Schaller © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <FooterInner>
+            Flavia Schaller © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </FooterInner>
         </Footer>
       </Wrapper>
     )}
