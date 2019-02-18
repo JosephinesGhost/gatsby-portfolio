@@ -11,4 +11,7 @@
 </h1>
 
 <p>Portfolio/Blog website using styled-components</p>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7a02a49d-ab6a-4922-bba0-25f4de730d1c/deploy-status)](https://app.netlify.com/sites/eager-kirch-864050/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:END -->
