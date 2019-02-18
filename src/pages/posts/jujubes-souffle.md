@@ -1,7 +1,7 @@
 ---
 title: "Jujubes soufflé"
 date: "2017-12-20"
-image: "five.jpg"
+image: "../../assets/images/five.jpg"
 tags: ["animals", "Chicago", "zoos"]
 ---
 

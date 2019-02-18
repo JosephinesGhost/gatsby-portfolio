@@ -1,7 +1,7 @@
 ---
 title: "Cheesecake gingerbread"
 date: "2017-08-10"
-image: "three.jpg"
+image: "../../assets/images/three.jpg"
 tags: ["animals", "zoos"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Bonbon jujubes tootsie roll"
 date: "2018-08-21"
-image: "two.jpg"
+image: "../../assets/images/two.jpg"
 tags: ["animals"]
 ---
 

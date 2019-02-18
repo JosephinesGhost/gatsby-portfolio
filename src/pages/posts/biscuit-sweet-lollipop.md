@@ -1,7 +1,7 @@
 ---
-title: "Gummi bears"
-date: "2017-12-20"
-image: "four.jpg"
+title: "Biscuit sweet lollipop"
+date: "2019-01-20"
+image: "../../assets/images/one.jpg"
 tags: ["animals", "Chicago", "zoos"]
 ---
 
