@@ -72,3 +72,4 @@ yarn-error.log
 src/backups/
 src/assets/fonts
 src/assets/svgs
+package-lock.json
