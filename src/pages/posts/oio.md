@@ -2,7 +2,7 @@
 layout: blog
 title: Oio
 date: 2019-02-18T16:40:23.206Z
-image: ../../assets/images/kareli-lizcano-1191885-unsplash.jpg
+image: ../../assets/images/sevens.jpg
 tags:
   - dog
   - puppy
