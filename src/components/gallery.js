@@ -139,7 +139,7 @@ export default props => (
                   image {
                   childImageSharp {
                       fluid(maxWidth: 800) {
-                        ...GatsbyImageSharpFluid_noBase64
+                      ...GatsbyImageSharpFluid_noBase64
                         aspectRatio
                       }
                   }
