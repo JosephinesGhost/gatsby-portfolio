@@ -1,4 +1,5 @@
 ---
+layout: blog
 title: "Tootsie roll biscuit macaroon"
 date: "2017-12-20"
 image: "six.jpg"
