@@ -9,8 +9,8 @@ module.exports = {
     {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: "markdown-pages",
-      path: `${__dirname}/pages/posts`,
+      name: "pages",
+      path: `${__dirname}/pages`,
     },
   },
     {
@@ -43,7 +43,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -56,6 +55,7 @@ module.exports = {
         icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
