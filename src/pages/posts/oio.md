@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Oio!!!
+title: Oio
 date: 2019-02-18T01:41:27.754Z
 image: /images/uploads/jamie-street-1218473-unsplash.jpg
 tags:
