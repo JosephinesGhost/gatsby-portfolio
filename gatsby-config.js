@@ -10,7 +10,7 @@ module.exports = {
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      path: `${__dirname}/static/uploads`,
+      path: `${__dirname}/static/img`,
       name: 'uploads',
     },
   },
@@ -54,7 +54,10 @@ module.exports = {
           // gatsby-remark-relative-images must
           // go before gatsby-remark-images
           {
-            resolve: `gatsby-remark-relative-images`,
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads',
+            },
           },
           {
             resolve: `gatsby-remark-images`,
