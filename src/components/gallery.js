@@ -18,47 +18,46 @@ const Inner = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 6rem;
-     
-    @media (max-width: 1048px) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @media (max-width: 800px) {
-        grid-template-columns: 1fr;
-    }
-
 `
 
 const Box = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
+    column-gap: 5rem;
     align-items: center;
-
-    ${Inner} &:nth-child(even) {
-        grid-template-areas: 
-        "right left";
-    }
 
     ${Inner} &:nth-child(odd) {
         grid-template-areas: 
-        "left right";
+        "thumb text";
     }
 
+    ${Inner} &:nth-child(even) {
+        grid-template-areas: 
+        "text thumb";
+    }
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 1rem;
+        grid-template-areas: none; 
+        ${Inner} &:nth-child(even),
+        ${Inner} &:nth-child(odd){
+        grid-template-areas: "thumb" "text"; 
+        }
+
+    }
 `
 
 const Thumb = styled(Link)`
     text-decoration: none;
     color: inherit;
-    grid-area: left;
+    grid-area: thumb;
 
 `
 
 const Content = styled.div`
     text-decoration: none;
-    grid-area: right;
-    padding: 2rem;
-
+    grid-area: text;
 `
 
 const StyledLink = styled(Link)`
