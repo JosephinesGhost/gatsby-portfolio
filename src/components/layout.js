@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   padding-bottom: 3rem; /* For footer */
 
     @media (max-width: 800px) {
-        padding: 1rem 3rem 3rem;
+        padding: 1rem 1rem 3rem;
     }
 `
 

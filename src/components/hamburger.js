@@ -86,16 +86,20 @@ const Inner = styled.div`
     transform: translateX(30rem);
     transition: 0.5s;
 
+    @media (max-width: 800px) {
+        width: 100vw;
+        transform: translateX(100vw);
+    }
+
     #burger-menu:checked ~ & {
     transform: translateX(0rem);
 }
 `
 
 const Nav = styled.div`
-    font-family: brandon-grotesque;
+    font-family: GillSansNova-light, sans-serif;
     text-align: center;
     margin: 0.5rem auto;
-    font-weight: 300;
     font-size: 0.85rem;
     text-transform: uppercase;
     display: flex;
@@ -108,8 +112,8 @@ const Item = styled(Link)`
 `
 
 const Title = styled.h1`
-  font-family: tamarillo-jf;
-  font-weight: 400;
+  font-family: cormorant-garamond;
+  font-weight: 600;
 `
 
 const TitleLink = styled(Link)`
