@@ -25,22 +25,49 @@ const Inner = styled.div`
 `
 
 const Footer = styled.div`
-  padding: 0.8rem;
+  /* padding: 0.8rem; */
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  padding: 3rem;
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
+`
+
+const Circle = styled.div`
+    /* width: 250px;
+    height: 250px;
+    background: #F9F1EF;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    left: -100px; */
+    z-index: -30;
 `
 
 const FooterInner = styled.div`
   font-family: GillSansNova-Light, serif;
   font-weight: 300;
-  margin: 0 auto;
+  margin: 0;
   padding: 1rem 0;
-  max-width: 94%;
+  max-width: 50%;
+    & span {
+      color: #DEA08B;
+      padding: 3px;
+    }
 `
 
+const FooterContact = styled.div`
+  font-family: GillSansNova-LightItalic, serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 1rem 0;
+  max-width: 50%;
+  text-align: right;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -61,11 +88,15 @@ const Layout = ({ children }) => (
         </Inner>
         <Footer>
           <FooterInner>
-            Flavia Schaller © {new Date().getFullYear()}, Built with
+            Flavia Schaller © {new Date().getFullYear()} <span>&#10084;</span> Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </FooterInner>
+          <FooterContact>
+          <span class="lnr lnr-envelope">&#xe818;</span><a href="mailto:contact@foksie.co">contact@foksie.co</a>
+          </FooterContact>
         </Footer>
+        <Circle></Circle>
       </Wrapper>
     )}
   />

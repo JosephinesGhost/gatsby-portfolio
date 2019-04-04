@@ -3,6 +3,7 @@ module.exports = {
     title: `Flavia Schaller`,
     description: `Developer  +  Designer`,
     author: `@flaviaschaller`,
+    email: `contact@foksie.co`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
