@@ -1,7 +1,7 @@
 ---
 title: Ceac - Website
 date: 2019-04-04T21:37:24.346Z
-image: /images/shotsnapp-1554413297.635.png
+image: /images/ceac1.jpg
 tags:
   - website
   - design
