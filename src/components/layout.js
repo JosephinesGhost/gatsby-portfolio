@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import EnvelopeIcon from '../assets/svg/envelope.inline.svg'
 
 import Header from './header'
 import './layout.css'
@@ -37,17 +38,6 @@ const Footer = styled.div`
   height: 4rem;
 `
 
-const Circle = styled.div`
-    /* width: 250px;
-    height: 250px;
-    background: #F9F1EF;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -100px;
-    left: -100px; */
-    z-index: -30;
-`
-
 const FooterInner = styled.div`
   font-family: GillSansNova-Light, serif;
   font-weight: 300;
@@ -61,12 +51,17 @@ const FooterInner = styled.div`
 `
 
 const FooterContact = styled.div`
+  background-image: url('../assets/svg/envelope.inline.svg')
   font-family: GillSansNova-LightItalic, serif;
   font-weight: 300;
   margin: 0;
   padding: 1rem 0;
   max-width: 50%;
   text-align: right;
+`
+
+const Envelope = styled(EnvelopeIcon)`
+  margin: 0 6px -3px;
 `
 
 const Layout = ({ children }) => (
@@ -93,10 +88,10 @@ const Layout = ({ children }) => (
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </FooterInner>
           <FooterContact>
-          <span class="lnr lnr-envelope">&#xe818;</span><a href="mailto:contact@foksie.co">contact@foksie.co</a>
+            <Envelope />
+            <a href="mailto:contact@foksie.co">contact@foksie.co</a>
           </FooterContact>
         </Footer>
-        <Circle></Circle>
       </Wrapper>
     )}
   />

@@ -11,7 +11,7 @@ const FormWrapper = styled(Form)`
 const TextField = styled(Field)`
     padding: 0.3rem 0.8rem;
     margin-bottom: 1rem;
-    background-color: #faeeed;
+    background-color: #F9F1EF;
 `
 
 const Error = styled(ErrorMessage)`

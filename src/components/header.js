@@ -43,6 +43,9 @@ const Title = styled.div`
 const StyledLink = styled(Link)`
   color: #444;
   text-decoration: none;
+    &:hover {
+      color: #444;
+    }
 `
 
 const Menu = styled.div`
